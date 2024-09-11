@@ -47,8 +47,8 @@ public class Array
         }
 
         if (ary.length % 2 == 0) {
-            int midIndex1 = (ary.length / 2) - 1; // Index 9
-            int midIndex2 = ary.length / 2;       // Index 10
+            int midIndex1 = (ary.length / 2) - 1; 
+            int midIndex2 = ary.length / 2;       
             median = (ary[midIndex1] + ary[midIndex2]) / 2.0;
         } else {
             median = ary[ary.length / 2];
