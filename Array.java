@@ -75,13 +75,16 @@ public class Array
         findMode(ary);
         scan.close();
     }
-    // method to calc mode
+    
     public static void findMode (double[] ary) {
         int maxCount = 0;
         int currentCount = 1;
         double previousVal = ary[0];
         
-        // loop and find max counts
+        // maxCount tracks highest frequency of any value 
+        // currentCount counts frequency of the current value
+        // previousVal stores value being counted; updates whenever a new value is read
+
         for(int i = 1; i < ary.length; ++i){
             if(ary[i] == previousVal ){
                 currentCount++;
@@ -98,7 +101,8 @@ public class Array
             maxCount = currentCount;
     }
 
-    // loop to find and print values with max counts
+    // loop to find and print the values with max counts
+    // mode is printed if their frequency matches maxCount
     currentCount = 1;
     previousVal = ary[0];
 
@@ -118,7 +122,7 @@ public class Array
         }
     }
     if(currentCount == maxCount){
-        System.out.println(previousVal);
+        System.out.print(previousVal);
     }
     }
 }
