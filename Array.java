@@ -63,7 +63,7 @@ public class Array
         System.out.printf("%.2f", mean);
         System.out.println();
         System.out.print("Median: ");
-        System.out.printf("%.1f", median);
+        System.out.printf("%.2f", median);
 
         findMode(ary);
         scan.close();
@@ -84,14 +84,29 @@ public class Array
                 currentCount = 1;
                 previousVal = ary[i];
             }
-            System.out.println(maxCount);
-        System.out.println(previousVal);
         }
         if(currentCount > maxCount){
             maxCount = currentCount;
     }
-    System.out.println(currentCount);
-
+    currentCount = 1;
+    previousVal = ary[0];
+    System.out.println();
+    System.out.print("Mode Values: ");
+    for(int i = 1; i < ary.length; ++i){
+        if(ary[i] == previousVal){
+            currentCount++;
+        }
+        else {
+            if(currentCount == maxCount){
+                System.out.print(previousVal + " ");
+            }
+            currentCount = 1;
+            previousVal = ary[i];
+        }
+    }
+    if(currentCount == maxCount){
+        System.out.println(previousVal);
+    }
     }
 }
 
