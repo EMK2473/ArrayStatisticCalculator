@@ -32,10 +32,21 @@ public class Array
         
         // sort array and calculate values for min, max, mean, median, and mode
         Arrays.sort(ary);
-
+        double min = ary[0];
+        double max = ary[ary.length - 1];
+        double mean = sum / count;
 
         System.out.println();
         System.out.println("Ascending Order:");
+        System.out.println();
+        System.out.print("Min: ");
+        System.out.printf("%.2f", min);
+        System.out.println();
+        System.out.print("Max: ");
+        System.out.printf("%.2f", max);
+        System.out.println();
+        System.out.print("Mean: ");
+        System.out.printf("%.2f", mean);
 
     
         scan.close();
