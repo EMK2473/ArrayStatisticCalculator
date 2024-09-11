@@ -5,6 +5,7 @@
  */
 
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class Array
 {
@@ -14,8 +15,8 @@ public class Array
         int count = 0;
         
         Scanner scan = new Scanner(System.in);
-        
         int index = 0;
+
         while(scan.hasNext())
             {
                 ary[index] = scan.nextDouble();
@@ -24,17 +25,19 @@ public class Array
                 index++;
             }
 
-            System.out.println("TEST");
-            System.out.println("count: " + count);
-            System.out.println("sum: " + sum);
-        
         for(int i = 0; i < ary.length; i++)
             {
                 System.out.println(ary[i]);
             }
-            double average = sum / count;
-            System.out.print("Average: ");
-            System.out.printf("%.2f", average);
-            scan.close();
+        
+        // sort array and calculate values for min, max, mean, median, and mode
+        Arrays.sort(ary);
+
+
+        System.out.println();
+        System.out.println("Ascending Order:");
+
+    
+        scan.close();
     }
 }
