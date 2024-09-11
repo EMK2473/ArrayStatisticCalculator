@@ -31,11 +31,6 @@ public class Array
                 index++;
             }
 
-        for(int i = 0; i < ary.length; i++)
-            {
-                System.out.println(ary[i]);
-            }
-        
         // sort array and calculate values for min, max, mean, median, and mode
         Arrays.sort(ary);
         double min = ary[0];
