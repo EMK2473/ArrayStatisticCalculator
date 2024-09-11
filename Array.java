@@ -44,11 +44,12 @@ public class Array
         if(ary.length % 2 == 0){
             int midIndex1 = (ary.length / 2) - 1;
             int midIndex2 = (ary.length/ 2);
-            median = (double) (midIndex1 + midIndex2) / 2;
+            median = (double) (ary[midIndex1] + ary[midIndex2]) / 2;
         } 
         else {
-            median = (ary.length / 2);
+            median = ary[ary.length / 2];
         }
+
 
         System.out.println();
         System.out.println("Ascending Order:");
@@ -64,7 +65,16 @@ public class Array
         System.out.println();
         System.out.print("Median: ");
         System.out.printf("%.2f", median);
-        
+
+        findMode(ary);
         scan.close();
     }
+    public static void findMode (double[] ary) {
+        int maxCount = 0;
+        int currentCount = 1;
+        double previousVal = ary[0];
+    
+    }
 }
+
+
