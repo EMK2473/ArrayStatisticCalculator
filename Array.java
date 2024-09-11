@@ -35,6 +35,20 @@ public class Array
         double min = ary[0];
         double max = ary[ary.length - 1];
         double mean = sum / count;
+        double median;
+
+        for(double num : ary) {
+            System.out.println(num);
+        }
+
+        if(ary.length % 2 == 0){
+            int midIndex1 = (ary.length / 2) - 1;
+            int midIndex2 = (ary.length/ 2);
+            median = (double) (midIndex1 + midIndex2) / 2;
+        } 
+        else {
+            median = (ary.length / 2);
+        }
 
         System.out.println();
         System.out.println("Ascending Order:");
@@ -47,8 +61,10 @@ public class Array
         System.out.println();
         System.out.print("Mean: ");
         System.out.printf("%.2f", mean);
-
-    
+        System.out.println();
+        System.out.print("Median: ");
+        System.out.printf("%.2f", median);
+        
         scan.close();
     }
 }
