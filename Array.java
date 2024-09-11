@@ -68,11 +68,13 @@ public class Array
         findMode(ary);
         scan.close();
     }
+    // method to calc mode
     public static void findMode (double[] ary) {
         int maxCount = 0;
         int currentCount = 1;
         double previousVal = ary[0];
-    
+        
+        // loop and find max counts
         for(int i = 1; i < ary.length; ++i){
             if(ary[i] == previousVal ){
                 currentCount++;
@@ -88,10 +90,14 @@ public class Array
         if(currentCount > maxCount){
             maxCount = currentCount;
     }
+
+    // loop to find and print values with max counts
     currentCount = 1;
     previousVal = ary[0];
+
     System.out.println();
-    System.out.print("Mode Values: ");
+    System.out.print("Mode: ");
+    
     for(int i = 1; i < ary.length; ++i){
         if(ary[i] == previousVal){
             currentCount++;
