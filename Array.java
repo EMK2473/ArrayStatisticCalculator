@@ -1,7 +1,13 @@
 /*
- 
- Input header information here
- 
+Array Statistics Calculator
+Project 2
+Eric Keeton
+
+Input: This program expects 20 numbers as input from the command line. The input provided should be used via redirection from the `input.txt` file.
+
+Output: The program outputs the minimum, maximum, mean, median, and mode of the input numbers.
+
+Purpose: This program reads 20 numbers from the input, calculates and displays the statistics including the minimum, maximum, mean, median, and mode. 
  */
 
 import java.util.Scanner;
@@ -40,6 +46,7 @@ public class Array
         System.out.println();
         System.out.println("Ascending Order:");
 
+        // for each loop to print in ascending order
         for(double num : ary) {
             System.out.println(num);
         }
@@ -53,10 +60,10 @@ public class Array
         }
 
         System.out.println();
-        System.out.print("Min: ");
+        System.out.print("Minimum: ");
         System.out.printf("%.2f", min);
         System.out.println();
-        System.out.print("Max: ");
+        System.out.print("Maximum: ");
         System.out.printf("%.2f", max);
         System.out.println();
         System.out.print("Mean: ");
@@ -97,7 +104,7 @@ public class Array
 
     System.out.println();
     System.out.print("Mode: ");
-    
+
     for(int i = 1; i < ary.length; ++i){
         if(ary[i] == previousVal){
             currentCount++;
